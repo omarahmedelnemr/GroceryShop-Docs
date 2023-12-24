@@ -1,0 +1,59 @@
+[
+    {
+        "endpoint": "/getPaymentMethods",
+        "section": "payment",
+        "method": "GET",
+        "description": "Get payment methods for a user",
+        "parameters": [
+            {"paramName": "userId", "paramType": "string", "paramDescription": "User ID"}
+        ],
+        "requestExample": "/getPaymentMethods?userId=user@gmail.com",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "userID": "user@gmail.com",
+                    "cardNumber": "**** **** **** 1234",
+                    "cvv": "123",
+                    "cardHolderName": "John Doe"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of payment methods associated with the user."
+    },
+    {
+        "endpoint": "/addPaymentMethods",
+        "section": "payment",
+        "method": "POST",
+        "description": "Add payment methods",
+        "parameters": [
+            {"paramName": "userID", "paramType": "string", "paramDescription": "User ID"},
+            {"paramName": "cardNumber", "paramType": "string", "paramDescription": "Card number"},
+            {"paramName": "cvv", "paramType": "string", "paramDescription": "CVV"},
+            {"paramName": "cardHolderName", "paramType": "string", "paramDescription": "Cardholder name"}
+        ],
+        "requestExample": "/addPaymentMethods",
+        "requestBodyExample": {
+            "userID": "user@gmail.com",
+            "cardNumber": "**** **** **** 1234",
+            "cvv": "123",
+            "cardHolderName": "John Doe"
+        },
+        "responseExample": {"success": true, "message": "Payment method added successfully"},
+        "responseDescription": "Adds a new payment method for the user."
+    },
+    {
+        "endpoint": "/removePaymentMethods",
+        "section": "payment",
+        "method": "DELETE",
+        "description": "Remove payment methods",
+        "parameters": [
+            {"paramName": "userId", "paramType": "string", "paramDescription": "User ID"},
+            {"paramName": "paymentMethodId", "paramType": "integer", "paramDescription": "Payment method ID"}
+        ],
+        "requestExample": "/removePaymentMethods?userId=user@gmail.com&paymentMethodId=1",
+        "responseExample": {"success": true, "message": "Payment method removed"},
+        "responseDescription": "Removes the specified payment method for the user."
+    }
+]

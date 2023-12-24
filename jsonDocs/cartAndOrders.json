@@ -1,0 +1,147 @@
+[
+    {
+        "endpoint": "/cart-products",
+        "section": "order_and_cart",
+        "method": "GET",
+        "description": "Get all products in the user's cart",
+        "parameters": [
+            {"paramName": "email", "paramType": "string", "paramDescription": "The email of the user"}
+        ],
+        "requestExample": "/cart-products?email=user@gmail.com",
+        "responseExample": {
+            "success": true,
+            "data": {
+                "id": 1,
+                "totalPrice": 50.0,
+                "userID": "user@gmail.com",
+                "products": [
+                    {
+                        "id": 1,
+                        "productName": "Product A",
+                        "productPrice": 20.0,
+                        "productImage": "image_url",
+                        "orderedQuantity": 2,
+                        "calories": 150,
+                        "discount": 5,
+                        "brand": "Brand X",
+                        "nationality": "Country Y"
+                    },
+                    {
+                        "id": 2,
+                        "productName": "Product B",
+                        "productPrice": 30.0,
+                        "productImage": "image_url",
+                        "orderedQuantity": 1,
+                        "calories": 200,
+                        "discount": 0,
+                        "brand": "Brand Z",
+                        "nationality": "Country X"
+                    }
+                ]
+            }
+        },
+        "responseDescription": "Receives the user's cart details including products with their information."
+    },
+
+    {
+        "endpoint": "/confirm",
+        "section": "order_and_cart",
+        "method": "POST",
+        "description": "Confirm and place an order",
+        "parameters": [
+            {"paramName": "email", "paramType": "string", "paramDescription": "User email"}
+        ],
+        "requestExample": "/confirm",
+        "requestBodyExample": {
+            "email": "user@gmail.com"
+        },
+        "responseExample": {"success": true},
+        "responseDescription": "Confirms the items in the user's cart and places an order."
+    },
+    {
+        "endpoint": "/myOrder",
+        "section": "order_and_cart",
+        "method": "GET",
+        "description": "Get user's orders",
+        "parameters": [
+            {"paramName": "email", "paramType": "string", "paramDescription": "User email"}
+        ],
+        "requestExample": "/myOrder?email=user@gmail.com",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "totalPrice": 50.0,
+                    "orderDate": "2023-01-01 12:00:00",
+                    "delevaryDate": "2023-01-09 12:00:00",
+                    "status": "ordered",
+                    "userID": "user@gmail.com",
+                    "products": [
+                        {
+                            "id": 1,
+                            "productName": "Product A",
+                            "productPrice": 20.0,
+                            "productImage": "image_url",
+                            "orderedQuantity": 2,
+                            "calories": 150,
+                            "discount": 5,
+                            "brand": "Brand X",
+                            "nationality": "Country Y"
+                        },
+                        {
+                            "id": 2,
+                            "productName": "Product B",
+                            "productPrice": 30.0,
+                            "productImage": "image_url",
+                            "orderedQuantity": 1,
+                            "calories": 200,
+                            "discount": 10,
+                            "brand": "Brand Z",
+                            "nationality": "Country X"
+                        }
+                    ]
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of orders associated with the user, including ordered products."
+    },
+    {
+        "endpoint": "/addToCart",
+        "section": "order_and_cart",
+        "method": "POST",
+        "description": "Add a product to the cart with quantity",
+        "parameters": [
+            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"},
+            {"paramName": "email", "paramType": "string", "paramDescription": "User email"},
+            {"paramName": "quan", "paramType": "integer", "paramDescription": "Quantity"}
+        ],
+        "requestExample": "/addToCart",
+        "requestBodyExample": {
+            "prodID": 1,
+            "email": "user@gmail.com",
+            "quan": 2
+        },
+        "responseExample": {"success": true, "message": "Inserted successfully"},
+        "responseDescription": "Adds a specified quantity of a product to the user's cart."
+    },
+    {
+        "endpoint": "/removefromcart",
+        "section": "order_and_cart",
+        "method": "DELETE",
+        "description": "Remove a product quantity from the cart",
+        "parameters": [
+            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"},
+            {"paramName": "email", "paramType": "string", "paramDescription": "User email"},
+            {"paramName": "quan", "paramType": "integer", "paramDescription": "Quantity to remove"}
+        ],
+        "requestExample": "/removefromcart",
+        "requestBodyExample": {
+            "prodID": 1,
+            "email": "user@gmail.com",
+            "quan": 1
+        },
+        "responseExample": {"success": true, "message": "Deleted successfully"},
+        "responseDescription": "Removes a specified quantity of a product from the user's cart."
+    }
+]

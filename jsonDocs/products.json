@@ -1,0 +1,236 @@
+[
+    {
+        "endpoint": "/discounts",
+        "section": "products",
+        "method": "GET",
+        "description": "Get all products that have a discount",
+        "parameters": [],
+        "requestExample": "/discounts",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country Y"
+                },
+                {
+                    "id": 2,
+                    "productName": "Product B",
+                    "productPrice": 30.0,
+                    "productImage": "image_url",
+                    "calories": 200,
+                    "discount": 10,
+                    "brand": "Brand Z",
+                    "nationality": "Country X"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of products that have a discount, ordered by the discount amount in descending order."
+    },
+    {
+        "endpoint": "/brands",
+        "section": "products",
+        "method": "GET",
+        "description": "Get all brands on the system",
+        "parameters": [],
+        "requestExample": "/brands",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {"id": 1, "name": "Brand X", "nationality": "Country Y"},
+                {"id": 2, "name": "Brand Z", "nationality": "Country X"}
+            ]
+        },
+        "responseDescription": "Receives a list of all brands available in the system."
+    },
+    {
+        "endpoint": "/getallproducts",
+        "section": "products",
+        "method": "GET",
+        "description": "Get a list of all products",
+        "parameters": [],
+        "requestExample": "/getallproducts",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "quantity": 100,
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country Y"
+                },
+                {
+                    "id": 2,
+                    "productName": "Product B",
+                    "productPrice": 30.0,
+                    "productImage": "image_url",
+                    "quantity": 50,
+                    "calories": 200,
+                    "discount": 10,
+                    "brand": "Brand Z",
+                    "nationality": "Country X"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of all products available."
+    },
+    {
+        "endpoint": "/filterbyprice",
+        "section": "products",
+        "method": "GET",
+        "description": "Filter products by price range",
+        "parameters": [
+            {"paramName": "min", "paramType": "float", "paramDescription": "Minimum price"},
+            {"paramName": "max", "paramType": "float", "paramDescription": "Maximum price"}
+        ],
+        "requestExample": "/filterbyprice?min=10.0&max=30.0",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "quantity": 100,
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country Y"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of products within the specified price range."
+    },
+    {
+        "endpoint": "/filterbybrand",
+        "section": "products",
+        "method": "GET",
+        "description": "Filter products by brand name",
+        "parameters": [
+            {"paramName": "brand", "paramType": "string", "paramDescription": "Brand name"}
+        ],
+        "requestExample": "/filterbybrand?brand=Brand X",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "quantity": 100,
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country Y"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of products filtered by the specified brand name."
+    },
+    {
+        "endpoint": "/getproductinfo",
+        "section": "products",
+        "method": "GET",
+        "description": "Get information about a specific product",
+        "parameters": [
+            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"}
+        ],
+        "requestExample": "/getproductinfo?prodID=1",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "quantity": 100,
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country Y"
+                }
+            ]
+        },
+        "responseDescription": "Receives detailed information about a specific product."
+    },
+    {
+        "endpoint": "/getBySearch",
+        "section": "products",
+        "method": "GET",
+        "description": "Search products by keyword",
+        "parameters": [
+            {"paramName": "keyword", "paramType": "string", "paramDescription": "Search keyword"}
+        ],
+        "requestExample": "/getBySearch?keyword=product_name",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "quantity": 100,
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country Y"
+                },
+                {
+                    "id": 2,
+                    "productName": "Product B",
+                    "productPrice": 30.0,
+                    "productImage": "image_url",
+                    "quantity": 50,
+                    "calories": 200,
+                    "discount": 10,
+                    "brand": "Brand Z",
+                    "nationality": "Country X"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of products matching the search keyword."
+    },
+    {
+        "endpoint": "/filterByNationality",
+        "section": "products",
+        "method": "GET",
+        "description": "Filter products by nationality",
+        "parameters": [
+            {"paramName": "nationality", "paramType": "string", "paramDescription": "Nationality"}
+        ],
+        "requestExample": "/filterByNationality?nationality=Country X",
+        "responseExample": {
+            "success": true,
+            "data": [
+                {
+                    "id": 1,
+                    "productName": "Product A",
+                    "productPrice": 20.0,
+                    "productImage": "image_url",
+                    "quantity": 100,
+                    "calories": 150,
+                    "discount": 5,
+                    "brand": "Brand X",
+                    "nationality": "Country X"
+                }
+            ]
+        },
+        "responseDescription": "Receives a list of products filtered by the specified nationality."
+    }
+
+]

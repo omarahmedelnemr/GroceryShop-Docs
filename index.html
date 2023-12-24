@@ -1,0 +1,195 @@
+<!--
+ API Documentation HTML Template  - 1.0.1
+ Copyright © 2016 Florian Nicolas
+ Licensed under the MIT license.
+ https://github.com/ticlekiwi/API-Documentation-HTML-Template
+ !-->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>API - Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="ticlekiwi">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="icon" href="images/icon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body class="one-content-column-version">
+    <div id = 'show_leftMenu_buttom'>
+        >
+    </div>
+<div class="left-menu">
+    <div class="content-logo">
+        <div class="logo" style="text-align: center;">
+            <h1>GroceryShop</h1>
+            <br/>
+            <span>API Documentation</span>
+        </div>
+        <button class="burger-menu-icon" id="button-menu-mobile">
+            <svg width="34" height="34" viewBox="0 0 100 100"><path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path><path class="line line2" d="M 20,50 H 80"></path><path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path></svg>
+        </button>
+    </div>
+    <div class="mobile-menu-closer"></div>
+    <div class="content-menu">
+        <div class="content-infos">
+            <div class="info"><b>Version:</b> 1.0.0</div>
+            <!-- <div class="info"><b>Last Updated:</b> 15th Sep, 2021</div> -->
+        </div>
+        <ul>
+            <li class="scroll-to-link active" data-target="content-get-started">
+                <a>GET STARTED</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-how-to-use">
+                <a>How to Use</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-common-responses">
+                <a>Responses Strucure</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-sections">
+                <a>Sections</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-auth">
+                <a>&emsp;&emsp;Auth</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-products">
+                <a>&emsp;&emsp;Product Handling</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-order_and_cart">
+                <a>&emsp;&emsp;Cart & Orders</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-payment">
+                <a>&emsp;&emsp;Payment</a>
+            </li>      
+        </ul>
+    </div>
+</div>
+
+
+<div class="content-page">
+    <div class="content">
+        <div id="welcome">
+            <div class="logo" >
+                <h1>GroceryShop</h1>
+                <br/>
+                <span>API Documentation</span>
+            </div>
+            <p>Welcome to Grocery Shop API Documentations</p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-get-started">
+            <h1>Get started</h1>
+            <p>
+                This is the Backend API Documentation For <strong> Grocery Shop </strong> Medical System. 
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-how-to-use">
+            <h2>How to Use</h2>
+            <p>
+                To get Started, You Have To Have The Base URL For The API, For our Hosted Server:<br>
+                <code class="higlighted break-word">http://35.209.150.159/</code>
+            </p>
+            <p>Then You Would Have to Follow The Instructions Below For How to Use Every Endpoint with A Correct Parameters</p>
+
+            
+        </div>
+        <div class="overflow-hidden content-section" id="content-common-responses">
+            <h2>Responses Strucure</h2>
+            <p>
+                For Every Endpoint, the Response Will Be Consist of:<br/>
+                <div>
+                    <code class="higlighted">success</code> With Values <code class="higlighted">true/false</code>:<br/> 
+                    <p class="responseDescription">If the Request is Done Correctly Without Error, it is True, otherise it is False</p>
+                </div>
+                <div>
+                    <code class="higlighted">data</code>:<br/> 
+                    <p class="responseDescription">if the Request Successed, if it should Return a Data, it will be Name "data"</p>
+                </div>
+                <div>
+                    <code class="higlighted">message</code>:<br/> 
+                    <p class="responseDescription">When the Server Wanted to Tell Somthing to The Sender</p>
+                </div>
+
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-endpoints">
+            <p>For Example, To Use URL to Login, The URL Will Be Like:<br/> <code class="higlighted">http://35.209.150.159/login/</code></p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-sections">
+            <h2>Sections</h2>
+            <p>
+                Sections is The The Differant Features of the Project, like Login Feature, Home Features, and More
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-auth">
+            <h2>User Authentication</h2>
+
+            <p>The Section For User Authentication Operations, Like login, Signup, Forget Password and More</p>
+
+            <div class="endpointList" id="authEndpointsList">
+                
+            </div>
+            <div id="authEndpointsDetails"> 
+
+            </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-products">
+            <h2>Products Handling</h2>
+
+            <p>The Section For Handling Operations on Products, Like get, add new, Filter, etc</p>
+
+            <div class="endpointList" id="productsEndpointsList">
+                
+            </div>
+            <div id="productsEndpointsDetails"> 
+
+            </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-order_and_cart">
+            <h2>Cart and Orders</h2>
+
+            <p>Handling User's Cart and Order Operations</p>
+
+            <div class="endpointList" id="order_and_cartEndpointsList">
+                
+            </div>
+            <div id="order_and_cartEndpointsDetails"> 
+
+            </div>
+        </div>
+        <div class="overflow-hidden content-section" id="content-payment">
+            <h2>Payments</h2>
+
+            <p>Handling User's Payment Options</p>
+
+            <div class="endpointList" id="paymentEndpointsList">
+                
+            </div>
+            <div id="paymentEndpointsDetails"> 
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<script src="js/script.js"></script>
+<script type="module" src="js/DocsScript.js"></script>
+</body>
+
+</html>
