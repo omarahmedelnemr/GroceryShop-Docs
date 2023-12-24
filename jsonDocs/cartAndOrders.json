@@ -42,7 +42,44 @@
         },
         "responseDescription": "Receives the user's cart details including products with their information."
     },
-
+    {
+        "endpoint": "/addToCart",
+        "section": "order_and_cart",
+        "method": "POST",
+        "description": "Add a product to the cart with quantity",
+        "parameters": [
+            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"},
+            {"paramName": "email", "paramType": "string", "paramDescription": "User email"},
+            {"paramName": "quan", "paramType": "integer", "paramDescription": "Quantity"}
+        ],
+        "requestExample": "/addToCart",
+        "requestBodyExample": {
+            "prodID": 1,
+            "email": "user@gmail.com",
+            "quan": 2
+        },
+        "responseExample": {"success": true, "message": "Inserted successfully"},
+        "responseDescription": "Adds a specified quantity of a product to the user's cart."
+    },
+    {
+        "endpoint": "/removefromcart",
+        "section": "order_and_cart",
+        "method": "DELETE",
+        "description": "Remove a product quantity from the cart",
+        "parameters": [
+            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"},
+            {"paramName": "email", "paramType": "string", "paramDescription": "User email"},
+            {"paramName": "quan", "paramType": "integer", "paramDescription": "Quantity to remove"}
+        ],
+        "requestExample": "/removefromcart",
+        "requestBodyExample": {
+            "prodID": 1,
+            "email": "user@gmail.com",
+            "quan": 1
+        },
+        "responseExample": {"success": true, "message": "Deleted successfully"},
+        "responseDescription": "Removes a specified quantity of a product from the user's cart."
+    },
     {
         "endpoint": "/confirm",
         "section": "order_and_cart",
@@ -108,41 +145,15 @@
         "responseDescription": "Receives a list of orders associated with the user, including ordered products."
     },
     {
-        "endpoint": "/addToCart",
-        "section": "order_and_cart",
-        "method": "POST",
-        "description": "Add a product to the cart with quantity",
-        "parameters": [
-            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"},
-            {"paramName": "email", "paramType": "string", "paramDescription": "User email"},
-            {"paramName": "quan", "paramType": "integer", "paramDescription": "Quantity"}
-        ],
-        "requestExample": "/addToCart",
-        "requestBodyExample": {
-            "prodID": 1,
-            "email": "user@gmail.com",
-            "quan": 2
-        },
-        "responseExample": {"success": true, "message": "Inserted successfully"},
-        "responseDescription": "Adds a specified quantity of a product to the user's cart."
-    },
-    {
-        "endpoint": "/removefromcart",
+        "endpoint": "/order",
         "section": "order_and_cart",
         "method": "DELETE",
-        "description": "Remove a product quantity from the cart",
+        "description": "Cancel an order",
         "parameters": [
-            {"paramName": "prodID", "paramType": "integer", "paramDescription": "Product ID"},
-            {"paramName": "email", "paramType": "string", "paramDescription": "User email"},
-            {"paramName": "quan", "paramType": "integer", "paramDescription": "Quantity to remove"}
+            {"paramName": "orderID", "paramType": "integer", "paramDescription": "Order ID"}
         ],
-        "requestExample": "/removefromcart",
-        "requestBodyExample": {
-            "prodID": 1,
-            "email": "user@gmail.com",
-            "quan": 1
-        },
-        "responseExample": {"success": true, "message": "Deleted successfully"},
-        "responseDescription": "Removes a specified quantity of a product from the user's cart."
+        "requestExample": {"orderID": 1},
+        "responseExample": {"success": true, "message": "Order Canceled Successfully"},
+        "responseDescription": "Cancels the specified order and removes associated products."
     }
 ]
