@@ -17,7 +17,10 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country Y"
+                    "nationality": "Country Y",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
+
                 },
                 {
                     "id": 2,
@@ -27,7 +30,9 @@
                     "calories": 200,
                     "discount": 10,
                     "brand": "Brand Z",
-                    "nationality": "Country X"
+                    "nationality": "Country X",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
@@ -68,7 +73,9 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country Y"
+                    "nationality": "Country Y",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 },
                 {
                     "id": 2,
@@ -79,7 +86,9 @@
                     "calories": 200,
                     "discount": 10,
                     "brand": "Brand Z",
-                    "nationality": "Country X"
+                    "nationality": "Country X",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
@@ -107,7 +116,9 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country Y"
+                    "nationality": "Country Y",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
@@ -134,7 +145,9 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country Y"
+                    "nationality": "Country Y",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
@@ -161,7 +174,9 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country Y"
+                    "nationality": "Country Y",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
@@ -188,7 +203,9 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country Y"
+                    "nationality": "Country Y",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 },
                 {
                     "id": 2,
@@ -199,7 +216,9 @@
                     "calories": 200,
                     "discount": 10,
                     "brand": "Brand Z",
-                    "nationality": "Country X"
+                    "nationality": "Country X",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
@@ -226,7 +245,9 @@
                     "calories": 150,
                     "discount": 5,
                     "brand": "Brand X",
-                    "nationality": "Country X"
+                    "nationality": "Country X",
+                    "totalOrdersNumber": 2,
+                    "lastDayOrders": 1
                 }
             ]
         },
